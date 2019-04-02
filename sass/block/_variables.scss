@@ -1,0 +1,173 @@
+// Colors
+$c-white: rgba(#FFFFFF, 1);
+$c-grey: rgba(#999999, 1);
+$c-light: rgba(#FFFFFF, 1); // #F9F9F9;
+$c-black: rgba(#010201, 1);
+$c-corp: rgba(#FF5500, 1);
+$c-green: rgba(#2cff2c, 1);
+
+// Animation Time
+$time: 0.3s;
+
+@mixin media-breakpoint-down($point) {
+  @if $point==xl {
+    @media (max-width: 1200px) {
+      @content ;
+    }
+  }
+
+  @else if $point==lg {
+    @media (max-width: 992px) {
+      @content ;
+    }
+  }
+
+  @else if $point==md {
+    @media (max-width: 768px) {
+      @content ;
+    }
+  }
+
+  @else if $point==sm {
+    @media (max-width: 576px) {
+      @content ;
+    }
+  }
+
+  @else if $point==xs {
+    @media (max-width: 0) {
+      @content ;
+    }
+  }
+}
+
+@mixin media-breakpoint-up($point) {
+  @if $point==xl {
+    @media (min-width: 1200px) {
+      @content ;
+    }
+  }
+
+  @else if $point==lg {
+    @media (min-width: 992px) {
+      @content ;
+    }
+  }
+
+  @else if $point==md {
+    @media (min-width: 769px) {
+      @content ;
+    }
+  }
+
+  @else if $point==sm {
+    @media (min-width: 576px) {
+      @content ;
+    }
+  }
+
+  @else if $point==xs {
+    @media (min-width: 0) {
+      @content ;
+    }
+  }
+}
+
+%bottom-border {
+  border-bottom: 2px solid $c-white;
+}
+
+%top-border {
+  border-top: 2px solid $c-white;
+}
+
+// %flex-row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   align-items: center;
+// }
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+%header-text {
+  font-family: 'Lobster';
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-left: 1rem;
+}
+
+%text {
+  font-family: 'Kalam';
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: rgb(0, 0, 0);
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+  }
+}
+
+%text-title {
+  font-family: 'Kalam';
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-decoration: underline;
+  transition-duration: 0.3s;
+  color: rgb(0, 0, 0);
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+  }
+}
+
+%title {
+  font-family: 'Junegull-Regular', arial;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 4px rgb(7, 7, 7);
+  transition-duration: 0.3s;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1.3rem;
+  }
+}
+
+%flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

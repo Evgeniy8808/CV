@@ -1,0 +1,62 @@
+header {
+    margin-bottom: 40px;
+
+    .header_burger {
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            margin-left: 1rem;
+            margin-top: 1rem;
+            width: .2rem;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .header_container {
+        margin-top: 50px;
+    }
+
+    .header__main {
+        @extend %flex-row;
+        background: $c-light;
+        width: 100%;
+        margin-bottom: 100px;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .header__top {
+        @extend %flex-column;
+        margin: 20px auto;
+        color: rgb(0, 0, 0);
+    }
+
+    p,
+    a {
+        @extend %header-text;
+        margin-top: 10px;
+    }
+
+    .header_info {
+        @extend %flex-column;
+    }
+
+    h2 {
+        @extend %text-title;
+        text-decoration: none;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h3 {
+        @extend %text;
+    }
+}
