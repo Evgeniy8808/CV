@@ -3,6 +3,7 @@ header {
 
     .header_burger {
         display: none;
+        margin-bottom: 20px;
 
         @include media-breakpoint-down(md) {
             display: flex;
@@ -74,6 +75,6 @@ header {
     }
 
     h3 {
-        @extend %text;
+        @extend %text-title;
     }
 }

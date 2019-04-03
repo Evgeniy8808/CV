@@ -4,6 +4,9 @@ footer {
     background: #000;
     padding: 70px 0;
     text-align: center;
+    @include media-breakpoint-down(sm){
+        padding: 40px 0;
+    }
 
     p,
     a {
