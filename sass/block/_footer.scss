@@ -10,5 +10,8 @@ footer {
         @extend %text;
         color: $c-white;
         text-decoration: none;
+        @include media-breakpoint-down(sm){
+            margin: 0;
+        }
     }
 }
