@@ -8,12 +8,12 @@ var config = {
 };
 
 gulp.task('sass', function () {
-    gulp.src(config.srcDir + "/" + config.sassPattern)
+    gulp.src(config.srcDir + '/' + config.sassPattern)
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS())
         .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('default', function () {
-    gulp.watch(config.srcDir + "/" + config.sassPattern, ['sass']);
+    gulp.watch(config.srcDir + '/' + config.sassPattern, ['sass']);
 });

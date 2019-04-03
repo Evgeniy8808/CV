@@ -1,0 +1,14 @@
+footer {
+    @extend %flex-row;
+    justify-content: center;
+    background: #000;
+    padding: 70px 0;
+
+    p,
+    a {
+        margin-right: 80px;
+        @extend %text;
+        color: $c-white;
+        text-decoration: none;
+    }
+}

@@ -81,13 +81,6 @@ $time: 0.3s;
   border-top: 2px solid $c-white;
 }
 
-// %flex-row {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   align-items: center;
-// }
-
 %flex-row {
   display: flex;
   flex-direction: row;
@@ -117,7 +110,7 @@ $time: 0.3s;
   font-size: 1.2rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  margin-left: 1rem;
+  
 }
 
 %text {
@@ -150,6 +143,7 @@ $time: 0.3s;
   font-weight: 900;
   text-shadow: 4px 4px 4px rgb(7, 7, 7);
   transition-duration: 0.3s;
+  color: $c-white;
 
   @include media-breakpoint-down(sm) {
     font-size: 1.3rem;
