@@ -3,6 +3,7 @@ footer {
     justify-content: center;
     background: #000;
     padding: 70px 0;
+    text-align: center;
 
     p,
     a {
@@ -10,5 +11,8 @@ footer {
         @extend %text;
         color: $c-white;
         text-decoration: none;
+        @include media-breakpoint-down(sm){
+            margin: 0;
+        }
     }
 }

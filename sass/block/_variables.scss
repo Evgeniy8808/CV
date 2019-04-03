@@ -89,7 +89,6 @@ $time: 0.3s;
   flex-wrap: wrap;
 
   @include media-breakpoint-down(sm) {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
