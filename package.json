@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts":{
+    "start": "gulp",
+    "zip": "gulp zip"
+  },
   "author": "Evgeniy",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.0.0",
     "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {
-    "gulp": "^3.9.1"
   }
 }
